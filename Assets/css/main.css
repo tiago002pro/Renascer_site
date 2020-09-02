@@ -10,6 +10,8 @@ html, body {
 }
 ul {
     list-style: none;
+    position: relative;
+    /* padding: 0; */
 }
 .container {
     width: 100%;
@@ -28,6 +30,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 .open-nav {
@@ -36,13 +39,14 @@ header {
 nav {
     width: 100%;
     max-width: 700px;
+    
 }
 nav .list-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 50px;
 }
-
 nav .list-menu a {
     position: relative;
     text-decoration: none;
@@ -132,5 +136,18 @@ nav .list-menu a:hover::before {
     nav.menu.active {
         left: 0;
     }
+}
 
+/* Home Video */
+.home_video {
+    text-align: center;
+    width: 100%;
+    height: 800px;
+    position:;
+    /* margin-top: -36px; */
+    margin-top: 100px;
+    
+}
+.home_video video {
+    /* position: relative; */
 }
