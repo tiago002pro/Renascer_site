@@ -7,6 +7,7 @@ html, body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    background-color:#222;
 }
 ul {
     list-style: none;
@@ -24,22 +25,20 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    background-color: #efdfb6;
+    background-color: #FFF;
+    z-index:1000;
 }
 .content-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    
+    justify-content: space-between; 
 }
-
 .open-nav {
     display: none;
 }
 nav {
     width: 100%;
     max-width: 700px;
-    
 }
 nav .list-menu {
     display: flex;
@@ -55,7 +54,7 @@ nav .list-menu a {
     padding-bottom: 5px;
 }
 nav .list-menu a:hover {
-    color: #fd6f0d;
+    color: #ff9b00;
 }
 nav .list-menu a::before {
     content: '';
@@ -64,7 +63,7 @@ nav .list-menu a::before {
     height: 2px;
     left: 0;
     bottom: 0;
-    background-color:#fd6f0d;
+    background-color:#ff9b00;
     transition: all .3s ease;
 }
 nav .list-menu a:hover::before {
@@ -72,8 +71,15 @@ nav .list-menu a:hover::before {
     transition: all .3s ease;
 }
 
-/* Responsito */
+/* Responsivo */
 @media (max-width: 425px) {
+    .container {
+        height: 40px;
+    }
+    .content-header img {
+        height: 30px;
+        margin-top: 5px;
+    }
     nav {
         position: fixed;
         top: 0;
@@ -132,7 +138,6 @@ nav .list-menu a:hover::before {
         transform: rotate(-35deg);
         transform-origin: left;
     }
-
     nav.menu.active {
         left: 0;
     }
@@ -142,12 +147,41 @@ nav .list-menu a:hover::before {
 .home_video {
     text-align: center;
     width: 100%;
-    height: 800px;
-    position:;
-    /* margin-top: -36px; */
-    margin-top: 100px;
-    
+    margin-top: -4px;
+    position: relative;    
 }
-.home_video video {
-    /* position: relative; */
+.capa_video {
+    background-color:#FFF;
+    width: 100%;
+    height: 710px;
+    margin-top: -800px;
+    position: absolute;
+    background-color: rgba(0,0,0,.44);
+} 
+.capa_video {
+    color: #FFF;
+}
+.capa_video h1 {
+    font-size: 70px;
+    text-align: center;
+    margin-top: 300px;
+}
+.capa_video p {
+    font-size: 30px;
+}
+@media (max-width: 425px ) {
+    .home_video {
+        width: 100%;
+        margin-top: 16px;
+    }
+    .capa_video {
+        margin-top: -710px;
+    }
+    .capa_video h1 {
+        margin-top: 570px;
+        font-size: 30px;
+    }
+    .capa_video p {
+        font-size: 20px;
+    }
 }
