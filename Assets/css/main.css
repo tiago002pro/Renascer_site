@@ -85,17 +85,19 @@ nav .list-menu a:hover::before {
         top: 0;
         left: 100%;
         width: 100%;
-        height: 100%;
-        background-color:rgb(255 154 23 / 67%);
+        height: 320px;
+        background-color: rgba(0, 0, 0, 0.897);
+        /* background-color:rgb(255 154 23 / 67%); */
     }
     nav .list-menu {
         flex-direction: column;
         margin: 0;
-        padding: 60px 0 0 0;
+        padding: 60px 0 0 0;  
     }
     nav .list-menu a {
         display: block;
         margin-bottom: 20px;
+        color: #FFF;   
     }
     .open-nav {
         position: relative;
@@ -151,7 +153,6 @@ nav .list-menu a:hover::before {
     position: relative;    
 }
 .capa_video {
-    background-color:#FFF;
     width: 100%;
     height: 710px;
     margin-top: -800px;
@@ -164,7 +165,8 @@ nav .list-menu a:hover::before {
 .capa_video h1 {
     font-size: 70px;
     text-align: center;
-    margin-top: 300px;
+    margin-top: 250px;
+    position: relative;
 }
 .capa_video p {
     font-size: 30px;
@@ -175,7 +177,7 @@ nav .list-menu a:hover::before {
         margin-top: 16px;
     }
     .capa_video {
-        margin-top: -710px;
+        margin-top: -720px;
     }
     .capa_video h1 {
         margin-top: 570px;
@@ -183,5 +185,63 @@ nav .list-menu a:hover::before {
     }
     .capa_video p {
         font-size: 20px;
+    }
+    .home_video .video_used {
+        /* height: 50px; */
+    }
+}
+
+/* Banner após o background */
+.banner {
+    background-color: #FFF;
+    width: 100%;
+    height: 200px;
+    margin-top: -200px;
+    z-index: auto;
+    position: relative;
+    /* opacity: .3; */
+}
+@media (max-width: 425px) {
+    .banner {
+        margin-top: -30px;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #1c1c1c;
+    width: 100%;
+    height: 200px;
+}
+
+.social_media {
+    background-color: #333; 
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    
+}
+.social_media_area {
+    height: 30px;
+    width: 30px;
+    background-color: #FFF;
+    border-radius: 25px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.social_media img {
+    height: 20px;
+    opacity: .8;
+}
+.social_media img:hover {
+    opacity: 1;
+}
+@media (max-width: 425px) {
+    .footer {
+        height: 100px;
     }
 }
