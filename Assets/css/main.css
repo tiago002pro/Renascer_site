@@ -129,7 +129,7 @@ nav .list-menu a:hover::before {
     }
 
     button.open-nav.open .line.line_1 {
-        transform: rotate(35deg);
+        transform: rotate(40deg);
         transform-origin: left;
     }
     button.open-nav.open .line.line_2 {
@@ -137,7 +137,7 @@ nav .list-menu a:hover::before {
         opacity: 0;
     }
     button.open-nav.open .line.line_3 {
-        transform: rotate(-35deg);
+        transform: rotate(-40deg);
         transform-origin: left;
     }
     nav.menu.active {
