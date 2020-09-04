@@ -9,6 +9,10 @@ html, body {
     font-family: 'Roboto', sans-serif;
     background-color: rgb(57 37 41);
 }
+body {
+    display: grid;
+    place-items: center;
+}
 
 .conteudo_page {
     height: 600px;
@@ -25,17 +29,17 @@ html, body {
     margin-bottom: 60px;
 }
 .conteudo_page .image {
-    width: 50%;
     float: left;
     text-align: center;
+    margin-right: 20px;
 }
 .image img {
-    height: 370px;
+    height: 350px;
 }
 .conteudo_page .description {
     color: #FFF;
     text-align: justify;
-    font-size: 20px;
+    font-size: 17px;
 }
 @media (max-width: 425px) {
     .conteudo_page {
@@ -53,15 +57,91 @@ html, body {
     }
     .conteudo_page .image {
         width: 100%;
+        margin-bottom: 20px;
         /* background-color: red; */
     }
     .image img {
-        width: 80%;
-        /* height: 100px; */
+        height: 200px;
     }
     .conteudo_page .description {
         text-align: center;
         margin-left: 20px;
         margin-right: 20px;
+    }
+    .conteudo_page .description h1{
+        font-size: 30px;
+    }
+}
+
+/* Carousel de imagens */
+#container {
+    width: 700px;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #000;
+}
+.principal {
+    width: 700px;
+    height: auto;
+    overflow: hidden;
+}
+.slide {
+    display: flex;
+    width: 1000%;
+    transition: all .8s;
+}
+label img {
+    width: 70px;
+    cursor: pointer;
+    float: left;
+    opacity: 0.3;
+    transition: all .4s;
+}
+input[name="grupo"] {
+    display: none; 
+}
+input[name="grupo"]:checked + label img {
+    opacity: 9; 
+}
+#slide_2:checked ~ .principal .slide {
+    margin-left: -100%;
+}
+#slide_3:checked ~ .principal .slide {
+    margin-left: -200%;
+}
+#slide_4:checked ~ .principal .slide {
+    margin-left: -300%;
+}
+#slide_5:checked ~ .principal .slide {
+    margin-left: -400%;
+}
+#slide_6:checked ~ .principal .slide {
+    margin-left: -500%;
+}
+#slide_7:checked ~ .principal .slide {
+    margin-left: -600%;
+}
+#slide_8:checked ~ .principal .slide {
+    margin-left: -700%;
+}
+#slide_9:checked ~ .principal .slide {
+    margin-left: -800%;
+}
+#slide_10:checked ~ .principal .slide {
+    margin-left: -900%;
+}
+@media (max-width: 425px) {
+    #container {
+        width: 300px;
+    }
+    .principal {
+        width: 300px;
+    }
+    .slide img {
+        width: 300px;
+    }
+    label img {
+        width: 30px;
     }
 }
